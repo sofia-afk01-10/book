@@ -19,8 +19,7 @@ int compare_scores_desc(const void* score_a, const void* score_b)
 typedef struct {
     int width;
     int height;
-    rectangle;
-}
+} rectangle;
 
 int compare_areas(const void* a, const void* b)
 {
@@ -38,7 +37,7 @@ int compare_names(const void* a, const void* b)
     return strcmp(*sa, *sb);
 }
 
-int compare_areas_desc(const void* a, void* b)
+int compare_areas_desc(const void* a, const void* b)
 {
     return compare_areas(b, a);
 }
@@ -61,6 +60,7 @@ int main()
     qsort (names, 4, sizeof(char*), compare_names);
     puts("Это упорядоченные имена:");
     for (i=0;i<4;i++){
-        printf
+        printf("%s\n", names[i]);
     }
+    return 0;
 }
